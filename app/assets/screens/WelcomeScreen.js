@@ -11,7 +11,7 @@ import {
   TouchableHighlight,
 } from "react-native";
 
-function WelcomeScreen({ navigation }) {
+function WelcomeScreen() {
   return (
     <ImageBackground style={styles.background}>
       <View>
@@ -22,7 +22,7 @@ function WelcomeScreen({ navigation }) {
               "https://www.logolynx.com/images/logolynx/30/301872965ed3860f18b2bf6c1ad08885.png",
           }}
         />
-        <Text style={styles.displayTextB}>
+        <Text style={styles.displayLargeText}>
           Very easy way to convert airtime to cash and more...
         </Text>
 
@@ -30,7 +30,7 @@ function WelcomeScreen({ navigation }) {
           style={styles.button}
           activeOpacity={0.6}
           underlayColor="#cccccc"
-          onPress={() => navigation.navigate("Verify")}
+          onPress={() => console.log("Button Pressed")}
         >
           <View>
             <Text style={styles.displayTextButton}>Get Started</Text>
@@ -44,7 +44,9 @@ function WelcomeScreen({ navigation }) {
           onPress={() => console.log("text tapped!")}
         >
           <View>
-            <Text style={styles.displayTextS}>I have an account already</Text>
+            <Text style={styles.displaySmallText}>
+              I have an account already
+            </Text>
           </View>
         </TouchableHighlight>
       </View>
@@ -60,12 +62,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 35,
   },
-  buttonOuterLayout: {
-    flex: 1,
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-  },
   button: {
     alignItems: "center",
     padding: 13,
@@ -74,7 +70,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     borderRadius: 10,
   },
-  displayTextB: {
+  displayLargeText: {
     fontSize: 25,
     color: "black",
     textAlignVertical: "center",
@@ -89,7 +85,7 @@ const styles = StyleSheet.create({
     color: "white",
     textAlignVertical: "center",
   },
-  displayTextS: {
+  displaySmallText: {
     fontSize: 14,
     fontWeight: "100",
     color: "green",
@@ -102,16 +98,6 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
 
-  registerButton: {
-    width: "100%",
-    height: 70,
-    backgroundColor: "brown",
-  },
-  separator: {
-    marginVertical: 8,
-    borderBottomColor: "blue",
-    borderBottomWidth: 200,
-  },
   touchText: {
     fontSize: 16,
     fontWeight: "100",
