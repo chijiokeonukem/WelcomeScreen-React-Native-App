@@ -8,27 +8,73 @@ import {
   TouchableHighlight,
 } from "react-native";
 
+const buttonPressFunctionn = () => {
+  console.log("Button Pressed");
+};
+
 function WelcomeScreen(props) {
   return (
-    <ImageBackground style={styles.background}>
+    <ImageBackground
+      source={{
+        uri: props.backgroundImage,
+      }}
+      style={{
+        flex: 1,
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: props.ScreenPadding,
+        top: props.ScreenTop,
+      }}
+    >
       <View>
         <Image
-          style={styles.logo}
+          style={{
+            width: props.logoWidth,
+            height: props.logoHeight,
+            alignSelf: props.alignLogo,
+          }}
           source={{
-            uri:
-              "https://www.logolynx.com/images/logolynx/30/301872965ed3860f18b2bf6c1ad08885.png",
+            uri: props.logoImage,
           }}
         />
-        <Text style={styles.displayLargeText}>{props.largeText}</Text>
+        <Text
+          style={{
+            fontSize: props.largeTextSize,
+            color: props.largeTextColor,
+            textAlignVertical: "center",
+            textAlign: "center",
+            marginTop: 10,
+            marginBottom: 30,
+          }}
+        >
+          {props.largeText}
+        </Text>
 
         <TouchableHighlight
-          style={styles.button}
+          style={{
+            alignItems: "center",
+            padding: props.buttonPadding,
+            backgroundColor: props.buttonColor,
+            color: props.buttonTextColor,
+            marginTop: 20,
+            borderRadius: props.buttonRaduis,
+          }}
           activeOpacity={props.buttonOpacity}
           underlayColor={props.buttenUnderlayColor}
           onPress={props.buttonPressFunction}
         >
           <View>
-            <Text style={styles.displayTextButton}>{props.buttonText}</Text>
+            <Text
+              style={{
+                fontSize: props.buttonTextSize,
+                fontWeight: "100",
+                color: props.buttonTextColor,
+                textAlignVertical: "center",
+              }}
+            >
+              {props.buttonText}
+            </Text>
           </View>
         </TouchableHighlight>
 
@@ -39,7 +85,16 @@ function WelcomeScreen(props) {
           onPress={() => console.log("text tapped!")}
         >
           <View>
-            <Text style={styles.displaySmallText}>{props.smallText}</Text>
+            <Text
+              style={{
+                color: props.smallTextColor,
+                fontSize: props.smallTextSize,
+                fontWeight: "100",
+                textAlign: "center",
+              }}
+            >
+              {props.smallText}
+            </Text>
           </View>
         </TouchableHighlight>
       </View>
@@ -48,56 +103,39 @@ function WelcomeScreen(props) {
 }
 
 const styles = StyleSheet.create({
-  background: {
-    flex: 1,
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 35,
-  },
-  button: {
-    alignItems: "center",
-    padding: 13,
-    backgroundColor: "green",
-    color: "white",
-    marginTop: 20,
-    borderRadius: 10,
-  },
-  displayLargeText: {
-    fontSize: 25,
-    color: "black",
-    textAlignVertical: "center",
-    textAlign: "center",
-    marginTop: 10,
-    marginBottom: 30,
-  },
-
-  displayTextButton: {
-    fontSize: 16,
-    fontWeight: "100",
-    color: "white",
-    textAlignVertical: "center",
-  },
-  displaySmallText: {
-    fontSize: 14,
-    fontWeight: "100",
-    color: "green",
-    textAlign: "center",
-  },
-
-  logo: {
-    width: 130,
-    height: 130,
-    alignSelf: "center",
-  },
-
   touchText: {
     fontSize: 16,
     fontWeight: "100",
-    color: "black",
     textAlignVertical: "center",
     padding: 10,
     marginTop: 20,
   },
 });
+
+WelcomeScreen.defaultProps = {
+  largeText: "Create a brief description of your product here...",
+  largeTextSize: 25,
+  largeTextColor: "black",
+  smallText: "small text goes here",
+  smallTextColor: "green",
+  smallTextSize: 18,
+  buttonText: "Button Text",
+  buttonTextColor: "white",
+  buttonTextSize: 20,
+  buttonColor: "green",
+  buttonRaduis: 10,
+  buttonPadding: 15,
+  buttonOpacity: 0.6,
+  buttenUnderlayColor: "#cccccc",
+  buttonColor: "green",
+  logoHeight: 130,
+  logoWidth: 130,
+  alignLogo: "center",
+  logoImage:
+    "https://www.logolynx.com/images/logolynx/30/301872965ed3860f18b2bf6c1ad08885.png",
+  backgroundImage:
+    "https://blog.hdwallsource.com/wp-content/uploads/2014/10/white-wallpaper-16876-17429-hd-wallpapers.jpg",
+  ScreenTop: 70,
+  ScreenPadding: 30,
+};
 export default WelcomeScreen;

@@ -5,11 +5,39 @@ This is a reusable Welcome Screen Component for React Native
 # Usage
 
 - Clone project
-- Locate WelcomeScreen.js at app/assets/screens/WecomeScreen.js and integrate into your project.
+- Locate WelcomeScreen.js at app/assets/screens/WecomeScreen.js and import into your project.
 - Call WelcomeScreen and pass props.
 - This component can be further customized to meet your personal need.
 - Note: i have used online images (uri) for image source, but you can change this to downloaded images in your project using the require function ( eg <Image source={require("image path")}>).
 
-# Example
+# List of props and default values
 
-<WelcomeScreen />
+- largeText = "Write a brief description of your product here..."
+- largeTextColor = "black"
+- largeTextSize = 25
+- smallText = "small text goes here"
+- smallTextColor = "green"
+- smallTextSize = 18
+- buttonText = "Button Text"
+- buttonTextColor = "white"
+- buttonTextSize = 20
+- buttonRaduis = 10
+- buttonPadding = 15
+- buttonOpacity = 0.6
+- buttenUnderlayColor = "#cccccc"
+- buttonColor = "green"
+- logoHeight = 130
+- logoWidth = 130
+- alignLogo = "center"
+- logoImage =
+  "https://www.logolynx.com/images/logolynx/30/301872965ed3860f18b2bf6c1ad08885.png"
+- backgroundImage =
+  "https://blog.hdwallsource.com/wp-content/uploads/2014/10/white-wallpaper-16876-17429-hd-wallpapers.jpg"
+- ScreenTop = 70
+- ScreenPadding = 30
+
+Note that if a prop value is not set, it assumes the default value.
+
+# Example usage
+
+- <WelcomeScreen largeText="This is my welcome screen"  smallText="Already have an account?" buttonColor="purple" smallTextColor="purple" />
