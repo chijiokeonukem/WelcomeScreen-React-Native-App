@@ -8,7 +8,7 @@ import {
   TouchableHighlight,
 } from "react-native";
 
-function WelcomeScreen() {
+function WelcomeScreen(props) {
   return (
     <ImageBackground style={styles.background}>
       <View>
@@ -19,18 +19,16 @@ function WelcomeScreen() {
               "https://www.logolynx.com/images/logolynx/30/301872965ed3860f18b2bf6c1ad08885.png",
           }}
         />
-        <Text style={styles.displayLargeText}>
-          Create a brief description of your product here...
-        </Text>
+        <Text style={styles.displayLargeText}>{props.largeText}</Text>
 
         <TouchableHighlight
           style={styles.button}
-          activeOpacity={0.6}
-          underlayColor="#cccccc"
-          onPress={() => console.log("Button Pressed")}
+          activeOpacity={props.buttonOpacity}
+          underlayColor={props.buttenUnderlayColor}
+          onPress={props.buttonPressFunction}
         >
           <View>
-            <Text style={styles.displayTextButton}>Get Started</Text>
+            <Text style={styles.displayTextButton}>{props.buttonText}</Text>
           </View>
         </TouchableHighlight>
 
@@ -41,9 +39,7 @@ function WelcomeScreen() {
           onPress={() => console.log("text tapped!")}
         >
           <View>
-            <Text style={styles.displaySmallText}>
-              I have an account already
-            </Text>
+            <Text style={styles.displaySmallText}>{props.smallText}</Text>
           </View>
         </TouchableHighlight>
       </View>
