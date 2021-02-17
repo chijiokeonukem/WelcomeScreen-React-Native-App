@@ -10,3 +10,7 @@ This is a reusable Welcome Screen Component for React Native
 * This component can be further customized to meet your personal need.
 * Note: i have used online images (uri) for image source, but you can change this to downloaded images in your project.
 
+# Example
+
+<WelcomeScreen />
+
