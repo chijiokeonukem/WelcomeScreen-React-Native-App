@@ -5,9 +5,6 @@ import {
   View,
   Image,
   Text,
-  Button,
-  Alert,
-  TouchableOpacity,
   TouchableHighlight,
 } from "react-native";
 
@@ -23,7 +20,7 @@ function WelcomeScreen() {
           }}
         />
         <Text style={styles.displayLargeText}>
-          Very easy way to convert airtime to cash and more...
+          Create a brief description of your product here...
         </Text>
 
         <TouchableHighlight
