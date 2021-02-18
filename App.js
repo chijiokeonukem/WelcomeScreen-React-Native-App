@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Alert } from "react-native";
 import WelcomeScreen from "./app/assets/screens/WelcomeScreen";
 
 export default function App() {
@@ -10,6 +10,8 @@ export default function App() {
         buttonColor="green"
         smallTextColor="green"
         smallText="Already have an account?"
+        buttonPressFunction={() => Alert.alert("Button pressed!")}
+        smallTextPressFunction={() => Alert.alert("Small text pressed!")}
       />
     </View>
   );

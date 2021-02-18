@@ -18,6 +18,9 @@ This is a reusable Welcome Screen Component for React Native
 - smallText = "small text goes here"
 - smallTextColor = "green"
 - smallTextSize = 18
+- smallTextPressFunction
+
+- buttonPressFunction
 - buttonText = "Button Text"
 - buttonTextColor = "white"
 - buttonTextSize = 20
@@ -40,4 +43,11 @@ Note that if a prop value is not set, it assumes the default value.
 
 # Example usage
 
-- <WelcomeScreen largeText="This is my welcome screen"  smallText="Already have an account?" buttonColor="green" smallTextColor="green" />
+      <WelcomeScreen
+        largeText="This is my welcome screen"
+        buttonColor="green"
+        smallTextColor="green"
+        smallText="Already have an account?"
+        buttonPressFunction={() => Alert.alert("Button pressed!")}
+        smallTextPressFunction={() => Alert.alert("Small text pressed!")}
+      />

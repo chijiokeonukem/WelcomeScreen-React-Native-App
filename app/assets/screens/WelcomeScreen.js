@@ -82,7 +82,7 @@ function WelcomeScreen(props) {
           style={styles.touchText}
           activeOpacity={0.6}
           underlayColor="#ccccc"
-          onPress={() => console.log("text tapped!")}
+          onPress={props.smallTextPressFunction}
         >
           <View>
             <Text
