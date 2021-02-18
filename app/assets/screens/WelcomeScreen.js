@@ -131,8 +131,7 @@ WelcomeScreen.defaultProps = {
   logoHeight: 130,
   logoWidth: 130,
   alignLogo: "center",
-  logoImage:
-    "https://www.logolynx.com/images/logolynx/30/301872965ed3860f18b2bf6c1ad08885.png",
+  logoImage: "https://www.itway.com/wp-content/uploads/2014/07/leaf.png",
   backgroundImage:
     "https://blog.hdwallsource.com/wp-content/uploads/2014/10/white-wallpaper-16876-17429-hd-wallpapers.jpg",
   ScreenTop: 70,

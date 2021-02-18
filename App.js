@@ -5,8 +5,8 @@ export default function App() {
   return (
     <WelcomeScreen
       largeText="This is my welcome screen"
-      buttonColor="purple"
-      smallTextColor="purple"
+      buttonColor="green"
+      smallTextColor="green"
       smallText="Already have an account?"
     />
   );
