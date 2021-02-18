@@ -134,7 +134,7 @@ WelcomeScreen.defaultProps = {
   logoImage: "https://www.itway.com/wp-content/uploads/2014/07/leaf.png",
   backgroundImage:
     "https://blog.hdwallsource.com/wp-content/uploads/2014/10/white-wallpaper-16876-17429-hd-wallpapers.jpg",
-  ScreenTop: 70,
+  ScreenTop: 22,
   ScreenPadding: 30,
 };
 export default WelcomeScreen;
