@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
 });
 
 WelcomeScreen.defaultProps = {
-  largeText: "Create a brief description of your product here and edit...",
+  largeText: "Create a brief description of your product here and edit for the second time...",
   largeTextSize: 25,
   largeTextColor: "black",
   smallText: "small text goes here",
