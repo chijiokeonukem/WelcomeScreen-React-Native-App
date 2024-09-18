@@ -1,6 +1,6 @@
 # WelcomeScreenComponent-React-Native
 
-This is a reusable Welcome Screen Component for React Native
+This is a reusable Welcome Screen Component for React Native.
 
 # Usage
 
