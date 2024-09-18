@@ -1,4 +1,4 @@
-# WelcomeScreenComponent-React-Native
+# WelcomeScreenComponent-React-Native-App
 
 This is a reusable Welcome Screen Component for React Native.
 
